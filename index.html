@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Spice Villa — Indian favourites, freshly prepared. Explore our menu and request a table.">
+<title>The Spice Villa | Good Food, Great Mood</title>
+<style>
+:root{--bg:#07110d;--panel:#101d16;--cream:#f7f0e3;--gold:#f4b544;--muted:#b9c0b8;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff;font-family:Inter,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(5,12,9,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}.brand{font-family:Georgia,serif;font-size:1.35rem;font-weight:bold;line-height:1.1}.brand small{display:block;font:600 .58rem Arial,sans-serif;letter-spacing:3px;color:var(--gold);margin-top:5px}.links{display:flex;gap:24px;align-items:center;font-size:.92rem;color:#e4e7e2}.links a:hover{color:var(--gold)}.btn{display:inline-block;border:0;border-radius:999px;padding:12px 20px;background:var(--gold);color:#1b160b;font-weight:800;cursor:pointer;transition:transform .2s,filter .2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}.btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}.menu-toggle{display:none;background:transparent;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 12px}
+.hero{min-height:570px;display:grid;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(4,10,7,.96) 0%,rgba(4,10,7,.83) 42%,rgba(4,10,7,.18) 100%),url('https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1800&q=85') center/cover}.hero-content{padding:86px 0;max-width:650px}.eyebrow{font-size:.75rem;text-transform:uppercase;letter-spacing:3px;color:var(--gold);font-weight:800}.hero h1{font:700 clamp(2.8rem,7vw,5.5rem)/1.04 Georgia,serif;margin:18px 0}.hero h1 span{color:var(--gold)}.hero p{max-width:520px;color:#e0e2dc;font-size:1.08rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.trust{display:flex;gap:24px;flex-wrap:wrap;margin-top:38px;color:#e4e4dc;font-size:.9rem}.trust b{color:var(--gold)}
+section{padding:76px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}.section-head h2,.about h2,.booking h2{font:700 clamp(2rem,4vw,3rem)/1.1 Georgia,serif;margin:8px 0}.section-head p{color:var(--muted);margin:0}.about{background:var(--cream);color:#182019}.about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}.about-img{min-height:350px;border-radius:18px;background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85') center/cover}.about p{color:#525a50}.features{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px}.feature{font-weight:800;font-size:.9rem}.feature span{display:block;font-size:.78rem;font-weight:400;color:#62695e}
+.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.dish{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s}.dish:hover{transform:translateY(-5px)}.dish img{width:100%;height:175px;object-fit:cover;display:block}.dish-body{padding:15px}.dish h3{font:700 1.15rem Georgia,serif;margin:0 0 5px}.dish p{font-size:.86rem;color:var(--muted);margin:0 0 14px}.price{color:var(--gold);font-weight:800}.dish-foot{display:flex;justify-content:space-between;align-items:center}
+.gallery{background:#0c1711}.gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:190px 190px;gap:14px}.gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:13px}.gallery-grid img:first-child{grid-row:span 2}
+.booking{background:var(--cream);color:#172018}.booking-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}.booking p{color:#555e53}.booking-form{background:#fff;border-radius:18px;padding:26px;box-shadow:0 14px 40px #17201812}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;font-size:.82rem;font-weight:800;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #d9ded4;border-radius:9px;padding:12px;background:#fff;color:#172018}.field.full{grid-column:1/-1}.field textarea{min-height:90px;resize:vertical}.booking-form .btn{width:100%;margin-top:16px}
+footer{padding:35px 0;background:#030805;color:#c8cec7}.footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-grid p{margin:6px 0;font-size:.9rem}.fine{border-top:1px solid var(--line);margin-top:24px;padding-top:18px;font-size:.8rem;color:#89928a}
+.notice{font-size:.82rem;color:#687065;margin-top:12px}
+@media(max-width:850px){.menu-grid{grid-template-columns:repeat(2,1fr)}.about-grid,.booking-grid{grid-template-columns:1fr}.about-img{min-height:280px}.hero{min-height:530px}.links{gap:14px}}
+@media(max-width:620px){.nav{min-height:68px}.menu-toggle{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 4%;background:#07110d;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.links.open{display:flex}.nav>.btn{display:none}.hero{min-height:560px;background-position:58% center}.hero-content{padding:65px 0}.hero h1{font-size:3.1rem}.section-head{align-items:flex-start;flex-direction:column}.menu-grid{gap:12px}.dish img{height:135px}.dish-body{padding:11px}.dish h3{font-size:1rem}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:150px 150px 150px}.gallery-grid img:first-child{grid-row:auto;grid-column:span 2}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}section{padding:58px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home">♨ The Spice Villa<small>GOOD FOOD • GREAT MOOD</small></a>
+<button class="menu-toggle" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+<nav class="links"><a href="#home">Home</a><a href="#about">Our Story</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#booking">Contact</a></nav>
+<a class="btn" href="#booking">Book a Table ↗</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap"><div class="hero-content">
+<div class="eyebrow">Authentic flavours • Fresh ingredients • Memorable moments</div>
+<h1>Welcome to<br><span>The Spice Villa</span></h1>
+<p>Traditional recipes, bold Indian spices and a warm welcome. Come hungry, leave happy.</p>
+<div class="actions"><a class="btn" href="#menu">🍴 Explore Our Menu</a><a class="btn outline" href="#about">Discover Our Story</a></div>
+<div class="trust"><span><b>✦</b> Freshly prepared</span><span><b>✦</b> Family friendly</span><span><b>✦</b> Made with care</span></div>
+</div></div></section>
+<section class="about" id="about"><div class="wrap about-grid"><div class="about-img" role="img" aria-label="Warm restaurant dining room"></div><div><div class="eyebrow">A little about us</div><h2>Good food brings<br>people together.</h2><p>At The Spice Villa, every dish is inspired by the flavours we grew up loving. We bring fresh ingredients, fragrant spices and heartfelt hospitality together for a meal worth remembering.</p><div class="features"><div class="feature">✦ Fresh ingredients<span>Picked with care</span></div><div class="feature">✦ Rich flavours<span>Spiced just right</span></div><div class="feature">✦ Warm service<span>Feel at home</span></div></div></div></div></section>
+<section id="menu"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Made to be enjoyed</div><h2>Guest favourites</h2><p>A few favourites from our sample menu.</p></div><a class="btn outline" href="#booking">Ask about the full menu →</a></div>
+<div class="menu-grid">
+<article class="dish"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=80" alt="Creamy Indian curry"><div class="dish-body"><h3>Butter Chicken</h3><p>Rich tomato gravy, cream and aromatic spices.</p><div class="dish-foot"><span class="price">₹249</span><span>★ 4.9</span></div></div></article>
+<article class="dish"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=700&q=80" alt="Indian paneer dish"><div class="dish-body"><h3>Paneer Tikka</h3><p>Smoky paneer with a house spice blend.</p><div class="dish-foot"><span class="price">₹199</span><span>★ 4.8</span></div></div></article>
+<article class="dish"><img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=700&q=80" alt="Biryani rice dish"><div class="dish-body"><h3>Chicken Biryani</h3><p>Fragrant rice layered with traditional spices.</p><div class="dish-foot"><span class="price">₹249</span><span>★ 4.9</span></div></div></article>
+<article class="dish"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80" alt="Crispy Indian snack"><div class="dish-body"><h3>Chef's Special</h3><p>A delicious surprise from our kitchen.</p><div class="dish-foot"><span class="price">₹179</span><span>★ 4.7</span></div></div></article>
+</div><p class="notice">Demo content: dish names, prices and ratings are examples. Replace them with verified restaurant details before publishing for a real business.</p></div></section>
+<section class="gallery" id="gallery"><div class="wrap"><div class="section-head"><div><div class="eyebrow">A taste of the experience</div><h2>From our table</h2><p>Good company, inviting spaces and food made with care.</p></div></div><div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=80" alt="Restaurant interior">
+<img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" alt="Indian food served at a table">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Restaurant table setting">
+<img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Freshly prepared dish">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Restaurant ambience">
+</div></div></section>
+<section class="booking" id="booking"><div class="wrap booking-grid"><div><div class="eyebrow">Your table is waiting</div><h2>Let's make it<br>a delicious day.</h2><p>Planning dinner, a family get-together or a special occasion? Send a table request and our team can confirm the details.</p><p><strong>☎ Phone:</strong> +91 98765 43210<br><strong>⌖ Address:</strong> Add restaurant address here<br><strong>◷ Hours:</strong> Add opening hours here</p><p class="notice">The contact details above are placeholders for this demo.</p></div>
+<form class="booking-form" id="bookingForm"><h3 style="margin-top:0;font-family:Georgia,serif;font-size:1.5rem">Request a table</h3><div class="form-grid">
+<div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Full name"></div>
+<div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" required type="tel" placeholder="+91"></div>
+<div class="field"><label for="date">Date</label><input id="date" name="date" type="date" required></div>
+<div class="field"><label for="guests">Guests</label><select id="guests" name="guests"><option>2 guests</option><option>1 guest</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6+ guests</option></select></div>
+<div class="field full"><label for="message">Special request (optional)</label><textarea id="message" name="message" placeholder="Preferred time or any special request"></textarea></div>
+</div><button class="btn" type="submit">Send table request ↗</button><p class="notice">Demo form: it opens a prepared WhatsApp message. Set the real restaurant WhatsApp number in the code before launch.</p></form></div></section>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><div><a class="brand" href="#home">♨ The Spice Villa<small>GOOD FOOD • GREAT MOOD</small></a><p>Indian flavours. Heartfelt hospitality.</p></div><div><strong>Explore</strong><p><a href="#about">Our story</a> · <a href="#menu">Menu</a> · <a href="#gallery">Gallery</a></p></div><div><strong>Visit us</strong><p>Replace this with your address<br>Replace with phone and opening hours</p></div></div><div class="fine">© <span id="year"></span> The Spice Villa Demo. Sample business website; replace all placeholder details before client use.</div></div></footer>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('date').min = new Date().toISOString().split('T')[0];
+document.getElementById('bookingForm').addEventListener('submit', function(e){
+ e.preventDefault();
+ const d = new FormData(this);
+ const msg = `Hello The Spice Villa! I'd like to request a table.%0AName: ${encodeURIComponent(d.get('name'))}%0APhone: ${encodeURIComponent(d.get('phone'))}%0ADate: ${encodeURIComponent(d.get('date'))}%0AGuests: ${encodeURIComponent(d.get('guests'))}%0ASpecial request: ${encodeURIComponent(d.get('message') || 'None')}`;
+ // Replace 919876543210 with the restaurant's real WhatsApp number, including country code.
+ window.open('https://wa.me/919876543210?text=' + msg, '_blank', 'noopener');
+});
+</script>
+</body></html>
